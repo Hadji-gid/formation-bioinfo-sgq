@@ -2,11 +2,14 @@ MARP = marp
 SLIDES = $(wildcard diapositives/*.md)
 PDFS = $(SLIDES:.md=.pdf)
 
-.PHONY: all slides manuel propre verifier
+.PHONY: all slides pptx manuel propre verifier
 
 all: slides
 
 slides: $(PDFS)
+
+pptx:
+	python3 outils/md_vers_pptx.py
 
 diapositives/%.pdf: diapositives/%.md
 	$(MARP) --pdf --allow-local-files $< -o $@

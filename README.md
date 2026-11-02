@@ -49,10 +49,29 @@ Les **douze actes** de la section, tels que définis par la fiche d'habilitation
 Les planches sont écrites en Markdown, lisibles telles quelles sur GitHub et projetables sans
 outil. Pour produire un PDF :
 
+Trois voies, de la plus simple à la plus complète.
+
+**1. Télécharger les PDF construits automatiquement.** À chaque poussée sur `main`,
+l'intégration continue construit les cinq jeux et dépose les PDF dans l'onglet *Actions* de
+GitHub, section *Artifacts*, conservés 30 jours. Aucun outil à installer.
+
+**2. Produire un PowerPoint éditable** — utile pour annoter avant la séance ou projeter sans
+réseau :
+
 ```bash
-npm install -g @marp-team/marp-cli   # une seule fois
+pip install python-pptx    # une seule fois
+make pptx                  # produit diapositives/*.pptx
+```
+
+**3. Produire les PDF en local**, mise en forme identique à celle de l'intégration continue :
+
+```bash
+npm install -g @marp-team/marp-cli   # une seule fois, nécessite Node
 make slides                          # produit diapositives/*.pdf
 ```
+
+Les fichiers produits (`*.pdf`, `*.pptx`) sont exclus du suivi Git : ils se régénèrent à partir
+du Markdown, qui reste la source unique.
 
 ## Articulation avec le système documentaire
 

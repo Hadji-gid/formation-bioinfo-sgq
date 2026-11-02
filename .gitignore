@@ -22,7 +22,7 @@ diapositives/*.pdf
 diapositives/*.html
 manuel/*.pdf
 *.docx
-*.pptx
+diapositives/*.pptx
 
 # Système
 .DS_Store
