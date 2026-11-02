@@ -1,0 +1,31 @@
+# Données — aucune donnée de séquençage ni donnée nominative dans ce dépôt (SOP RES-07)
+*.fastq
+*.fastq.gz
+*.fq.gz
+*.bam
+*.cram
+*.vcf
+*.vcf.gz
+*.fasta
+*.fa
+*.sam
+
+# Secrets
+.env
+*.key
+*.pem
+credentials*
+token*
+
+# Sorties de construction
+diapositives/*.pdf
+diapositives/*.html
+manuel/*.pdf
+*.docx
+*.pptx
+
+# Système
+.DS_Store
+Thumbs.db
+__pycache__/
+.ipynb_checkpoints/

@@ -1,0 +1,5 @@
+N° dépôt,ID Échantillon,Date dépôt,Base,Accession,Dépôt GISAID,Lectures humaines retirées (O/N),Volume (Go/Mo),Statut,RESPONSABLE
+DEP-2026-001,ECH-001,12/03/2026,GenBank,CP_123456,EPI_ISL_18945678,OUI,2.4 Go,Validé,ID
+DEP-2026-002,ECH-002,2026-03-14,ENA,ERS1234567,-,OUI (après contrôle),850 Mo,En attente,Idrissa TRAORE
+DEP-20260316-00003,ECH-004,16/03/2026,GenBank,CP654321,-,Non,1.1 Go,Clôturé,ID
+DEP-2026-004,ECH-006,2026-03-20,SRA,-,EPI_ISL_18945679,oui,3 Go,validé,idrissa traore

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+title: "Formation — Section bio-informatique du système de management de la qualité"
+message: "Si vous réutilisez ce support, merci de le citer."
+type: dataset
+authors:
+  - family-names: "DICKO"
+    given-names: "Alhadji Alassane"
+    affiliation: "Institut National de Santé Publique, Bamako, Mali"
+license: CC-BY-4.0
+version: "1.0.0"
+date-released: "2026-11-02"
+keywords:
+  - système de management de la qualité
+  - ISO 15189
+  - bio-informatique
+  - surveillance génomique
+  - formation

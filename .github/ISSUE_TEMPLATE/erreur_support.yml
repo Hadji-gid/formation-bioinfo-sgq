@@ -1,0 +1,33 @@
+name: Erreur dans le support
+description: Le support est faux, obsolète ou peu clair, mais la procédure est juste.
+labels: ["support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        À utiliser quand c'est le support qui se trompe. Si c'est la **procédure** qui doit
+        changer, utilisez l'autre modèle : ce dépôt n'est pas le lieu de cette décision.
+  - type: input
+    id: emplacement
+    attributes:
+      label: Où
+      description: Fichier et, si possible, numéro de planche ou de section.
+      placeholder: diapositives/03_pipeline_et_qualite.md, planche 4
+    validations:
+      required: true
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Ce qui est écrit, et pourquoi c'est faux
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Document qui fait foi
+      description: Code et paragraphe de la procédure en vigueur.
+      placeholder: BIO-02 § 6.4, version V2.1
+  - type: textarea
+    id: correction
+    attributes:
+      label: Correction proposée

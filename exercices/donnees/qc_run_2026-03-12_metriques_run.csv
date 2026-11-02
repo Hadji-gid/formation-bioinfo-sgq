@@ -1,0 +1,7 @@
+metrique,valeur,seuil_bio02
+identifiant_run,RUN-2026-03-12,
+densite_clusters_k_par_mm2,245,170 à 260
+pct_q30_global,91.4,>= 85
+pct_lectures_identifiees,97.2,>= 90
+temoin_positif_de_run,conforme,conforme
+temoin_negatif_de_run,conforme,conforme

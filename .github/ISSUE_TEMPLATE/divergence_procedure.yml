@@ -1,0 +1,35 @@
+name: La procédure elle-même doit changer
+description: Le support est fidèle à la procédure, mais c'est la procédure qui pose problème.
+labels: ["procédure", "à router vers FDM-001"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Cette demande **ne se tranche pas dans ce dépôt**. Elle doit être portée par une demande
+        de modification de document (formulaire FDM-001), instruite selon la procédure de
+        maîtrise des documents PM1-SM-01. Cette issue sert uniquement à ne pas perdre la
+        remarque entre-temps.
+  - type: input
+    id: document
+    attributes:
+      label: Procédure concernée
+      placeholder: BIO-05, § 6.2
+    validations:
+      required: true
+  - type: textarea
+    id: difficulte
+    attributes:
+      label: Difficulté rencontrée en pratique
+      description: Ce que la règle actuelle empêche, ou ce qu'elle ne prévoit pas.
+    validations:
+      required: true
+  - type: dropdown
+    id: fdm
+    attributes:
+      label: Une demande FDM-001 a-t-elle été déposée ?
+      options:
+        - "Pas encore"
+        - "Oui, en cours d'instruction"
+        - "Oui, acceptée — le support peut être mis à jour"
+    validations:
+      required: true

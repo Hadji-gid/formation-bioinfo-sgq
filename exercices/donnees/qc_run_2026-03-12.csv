@@ -1,0 +1,17 @@
+id_echantillon,urgent,paires_de_lectures,pct_q30,couverture_mediane_x,pct_genome_couvert,temoin_interne_extraction,statut_prelevement
+ECH-001,NON,978218,92.2,279,99.0,détecté,OK
+ECH-002,NON,2567385,90.3,524,97.1,détecté,OK
+ECH-003,NON,1524564,90.6,35,74.6,détecté,OK
+ECH-004,OUI,3516192,93.0,551,96.9,détecté,OK
+ECH-005,NON,3970792,91.0,187,98.2,détecté,OK
+ECH-006,NON,2792284,89.7,462,98.2,détecté,OK
+ECH-007,NON,1760585,93.2,24,75.2,détecté,OK
+ECH-008,NON,1664279,89.3,499,97.5,détecté,OK
+ECH-009,NON,2721943,93.5,132,98.0,ND,OK
+ECH-010,NON,1175113,91.9,335,99.0,détecté,OK
+ECH-011,OUI,4029748,92.6,245,99.2,détecté,OK
+ECH-012,NON,1413566,93.2,185,97.3,détecté,OK
+ECH-013,NON,1272060,93.7,37,75.3,détecté,OK
+ECH-014,NON,3496363,90.6,323,96.0,détecté,NR
+ECH-015,NON,1324964,91.3,342,97.9,détecté,OK
+ECH-016,NON,1385099,89.9,616,99.0,détecté,OK

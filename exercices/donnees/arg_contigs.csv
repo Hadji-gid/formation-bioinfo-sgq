@@ -1,0 +1,9 @@
+id_echantillon,gene_detecte,contig,longueur_contig_pb,replicon_plasmidique_sur_le_contig,distance_gene_replicon_pb
+ECH-001,blaCTX-M-15,contig_0012,24500,non,NA
+ECH-001,tet(A),contig_0047,8300,oui (IncF),4100
+ECH-002,blaCTX-M-15,contig_0310,1100,non,NA
+ECH-003,ermB,contig_0005,61200,non,NA
+ECH-004,blaTEM-1,contig_0021,48000,oui (IncI1),2300
+ECH-004,sul1,contig_0021,48000,oui (IncI1),15600
+ECH-005,aac(6')-Ib,contig_0802,940,non,NA
+ECH-006,tet(37),contig_0133,15400,non,NA

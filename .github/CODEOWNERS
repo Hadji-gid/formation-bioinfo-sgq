@@ -1,0 +1,12 @@
+# Relecteurs appelés automatiquement sur toute proposition de modification.
+# Remplacer les identifiants par les comptes GitHub réels avant usage.
+
+# Tout le dépôt — responsable de la section bio-informatique
+# *                 @compte-responsable-bioinfo
+
+# Évaluation : le Responsable Qualité relit toute modification du sujet ou du barème
+# /evaluation/      @compte-responsable-qualite
+
+# Règles de contribution et garde-fous : relecture qualité obligatoire
+# /CONTRIBUTING.md  @compte-responsable-qualite
+# /.github/         @compte-responsable-qualite

@@ -1,0 +1,71 @@
+name: Vérification du support
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  garde-fous:
+    name: Garde-fous de contenu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Aucun fichier de données ni de clé versionné
+        run: |
+          interdits=$(git ls-files | grep -Ei '\.(fastq|fq|bam|cram|sam|vcf|fasta|fa|key|pem|p12|pfx)(\.gz)?$' || true)
+          if [ -n "$interdits" ]; then
+            echo "::error::Fichiers interdits dans le dépôt :"; echo "$interdits"; exit 1
+          fi
+          echo "Aucun fichier interdit."
+
+      - name: Aucun secret apparent
+        run: |
+          motifs='ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|-----BEGIN [A-Z ]*PRIVATE KEY-----|xox[baprs]-[A-Za-z0-9-]{10,}'
+          trouve=$(git grep -nIE "$motifs" -- . ':!.github/workflows/*' || true)
+          if [ -n "$trouve" ]; then
+            echo "::error::Secret apparent détecté :"; echo "$trouve"; exit 1
+          fi
+          echo "Aucun secret apparent."
+
+      - name: Les jeux de données restent dans exercices/donnees
+        run: |
+          hors=$(git ls-files '*.csv' | grep -v '^exercices/donnees/' | grep -v '^evaluation/' || true)
+          if [ -n "$hors" ]; then
+            echo "::error::Fichiers CSV hors des dossiers autorisés :"; echo "$hors"; exit 1
+          fi
+          echo "Emplacement des jeux de données conforme."
+
+  liens:
+    name: Liens internes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Vérifier que les renvois internes résolvent
+        run: python outils/verifier_liens.py
+
+  diapositives:
+    name: Construction des diapositives
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Installer Marp
+        run: npm install -g @marp-team/marp-cli
+      - name: Construire les PDF
+        run: |
+          for f in diapositives/*.md; do
+            marp --pdf --allow-local-files "$f" -o "${f%.md}.pdf"
+          done
+      - name: Conserver les PDF produits
+        uses: actions/upload-artifact@v4
+        with:
+          name: diapositives-pdf
+          path: diapositives/*.pdf
+          retention-days: 30
