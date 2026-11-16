@@ -259,7 +259,8 @@ def convertir(source, destination=None):
 
 
 if __name__ == "__main__":
-    cibles = sys.argv[1:] or sorted(glob.glob(os.path.join(RACINE, "diapositives", "*.md")))
+    cibles = sys.argv[1:] or [f for f in sorted(glob.glob(os.path.join(RACINE, "diapositives", "*.md")))
+                              if not os.path.basename(f).startswith("00_")]
     for src in cibles:
         dst, n = convertir(src)
         print(f"{os.path.relpath(dst, RACINE)} — {n} planches")

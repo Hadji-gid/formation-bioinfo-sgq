@@ -20,6 +20,7 @@ La formation suit le cheminement de la donnée, de la réception des FASTQ au ra
 
 | Module | Objet |
 |---|---|
+| [0](diapositives/00_workflow_bioinformatique.pptx) | **Préalable** — flux de travail, formats de fichiers, mise en place de l'environnement (WSL, Ubuntu, Conda, outils) |
 | [1](diapositives/01_reception_fastq.md) | Réception des données de séquençage |
 | [2](diapositives/02_controle_qualite.md) | Contrôle qualité des lectures |
 | [3](diapositives/03_assemblage_taxonomie_annotation.md) | De la lecture au résultat |

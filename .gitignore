@@ -23,6 +23,8 @@ diapositives/*.html
 manuel/*.pdf
 *.docx
 diapositives/*.pptx
+# Exception : le module 0 n'est pas généré, le .pptx en est la source
+!diapositives/00_workflow_bioinformatique.pptx
 
 # Système
 .DS_Store
