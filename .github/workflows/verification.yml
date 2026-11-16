@@ -37,6 +37,19 @@ jobs:
           fi
           echo "Emplacement des jeux de données conforme."
 
+  presentations:
+    name: Intégrité des présentations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installer python-pptx
+        run: pip install python-pptx
+      - name: Identifiants de forme et relations
+        run: python outils/verifier_pptx.py
+
   liens:
     name: Liens internes
     runs-on: ubuntu-latest
