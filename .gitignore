@@ -29,3 +29,8 @@ manuel/*.pdf
 Thumbs.db
 __pycache__/
 .ipynb_checkpoints/
+
+# Journaux de session R
+.Rhistory
+.RData
+.Rproj.user/
