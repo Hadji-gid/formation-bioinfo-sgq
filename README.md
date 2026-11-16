@@ -66,13 +66,9 @@ Trois voies, de la plus simple à la plus complète.
 l'intégration continue construit les cinq jeux et dépose les PDF dans l'onglet *Actions* de
 GitHub, section *Artifacts*, conservés 30 jours. Aucun outil à installer.
 
-**2. Produire un PowerPoint éditable** — utile pour annoter avant la séance ou projeter sans
-réseau :
-
-```bash
-pip install python-pptx    # une seule fois
-make pptx                  # produit diapositives/*.pptx
-```
+**2. Modifier les planches** — les `.pptx` de `diapositives/` sont la source des modules : on
+les ouvre dans PowerPoint, on les enregistre, on les verse à Git. Voir
+[`diapositives/LISEZ-MOI.md`](diapositives/LISEZ-MOI.md).
 
 **3. Produire les PDF en local**, mise en forme identique à celle de l'intégration continue :
 
@@ -81,8 +77,8 @@ npm install -g @marp-team/marp-cli   # une seule fois, nécessite Node
 make slides                          # produit diapositives/*.pdf
 ```
 
-Les fichiers produits (`*.pdf`, `*.pptx`) sont exclus du suivi Git : ils se régénèrent à partir
-du Markdown, qui reste la source unique.
+Les PDF produits sont exclus du suivi Git. Les `.pptx`, eux, **sont** la source des modules et
+sont suivis ; les `.md` les accompagnent comme trace lisible du contenu.
 
 ## Articulation avec le système documentaire
 

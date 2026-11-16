@@ -1,6 +1,6 @@
 # Module 0 — Flux de travail en bio-informatique
 
-Ce module ne se génère pas depuis le Markdown.
+Comme tous les modules, ce fichier `.pptx` est la source — voir `LISEZ-MOI.md`.
 
 Il reprend la présentation « Bioinformatics analysis — Files and Workflow (Pipeline) » d'Alhadji
 A. Dicko, **traduite en français et conservée intacte** : mêmes planches, même enchaînement,
@@ -14,6 +14,4 @@ Quatre planches ont été **ajoutées** après « Outils de gestion de flux de t
 des outils depuis bioconda, gel et restitution de l'environnement. Leur contenu reprend
 l'instruction technique **BIO-08** du système qualité.
 
-Le fichier livré est `00_workflow_bioinformatique.pptx` (27 planches). Il se modifie
-directement dans PowerPoint — à la différence des modules 1 à 5, dont la source est le Markdown
-et dont le `.pptx` se régénère.
+Le fichier livré est `00_workflow_bioinformatique.pptx` (27 planches).

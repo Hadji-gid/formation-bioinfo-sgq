@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Convertit les planches Marp en PowerPoint, sur le gabarit `ressources/gabarit.pptx`.
+"""Crée un diaporama au gabarit `ressources/gabarit.pptx` à partir d'un fichier Markdown.
+
+ATTENTION : depuis le passage en source PowerPoint, les .pptx de `diapositives/` sont la
+source des modules et ne sont plus régénérés. Cet outil sert à **amorcer un nouveau module**
+: il refuse d'écraser un fichier existant sans --forcer.
 
 Le gabarit est le modèle de diaporama du master, vidé de ses diapositives : il apporte le
 masque, les dispositions, le thème et les polices (Caladea pour le romain, Carlito pour le
@@ -259,8 +263,14 @@ def convertir(source, destination=None):
 
 
 if __name__ == "__main__":
-    cibles = sys.argv[1:] or [f for f in sorted(glob.glob(os.path.join(RACINE, "diapositives", "*.md")))
-                              if not os.path.basename(f).startswith("00_")]
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    forcer = "--forcer" in sys.argv
+    cibles = args or sorted(glob.glob(os.path.join(RACINE, "diapositives", "*.md")))
     for src in cibles:
+        attendu = os.path.splitext(src)[0] + ".pptx"
+        if os.path.exists(attendu) and not forcer:
+            print(f"{os.path.relpath(attendu, RACINE)} — existe déjà, non régénéré "
+                  "(le .pptx est la source ; --forcer pour écraser)")
+            continue
         dst, n = convertir(src)
         print(f"{os.path.relpath(dst, RACINE)} — {n} planches")
