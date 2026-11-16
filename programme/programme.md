@@ -11,15 +11,16 @@ décision prise hors compétence se retrouve dans un rapport rendu.
 
 À l'issue de la formation, le participant est en mesure de :
 
-1. situer les actes de la section bio-informatique dans le système documentaire, et nommer la
-   procédure qui régit chacun d'eux ;
+1. conduire une série depuis la réception des FASTQ jusqu'au rapport, en nommant à chaque étape
+   la procédure qui la régit ;
 2. statuer sur la qualité d'un run et distinguer un échec de run d'un échec d'échantillon ;
 3. énoncer ce qu'une détection de gène de résistance établit et ce qu'elle n'établit pas ;
 4. expliquer pourquoi l'absence de co-localisation entre un gène et un élément mobile ne démontre
    pas un portage chromosomique ;
 5. appliquer les vocabulaires contrôlés et la règle du champ source unique lors d'une saisie ;
 6. conduire une restauration de contrôle et en consigner le résultat ;
-7. préparer un dépôt en base publique conforme aux règles de minimisation.
+7. préparer un dépôt en base publique conforme aux règles de minimisation ;
+8. rédiger un résultat dans des termes que les données portent effectivement.
 
 ## Public et prérequis
 
@@ -32,28 +33,28 @@ des procédures BIO-02 et BIO-07.
 Deux demi-journées, séparées d'au moins une semaine pour laisser le temps de la lecture et d'une
 première mise en pratique encadrée.
 
-### Première demi-journée — cadre et décisions (3 h 30)
+### Première demi-journée — des FASTQ aux résultats bruts (3 h 30)
 
 | Durée | Séquence | Support |
 |-------|----------|---------|
 | 20 min | Accueil, objectifs, tour de table des pratiques actuelles | — |
-| 40 min | Le SGQ vu de la section bio-informatique : à quoi servent les procédures | [`01_sgq_et_section_bioinfo.md`](../diapositives/01_sgq_et_section_bioinfo.md) |
-| 40 min | Les douze actes, les niveaux N1–N4, ce qu'habiliter veut dire | [`02_actes_et_habilitation.md`](../diapositives/02_actes_et_habilitation.md) |
+| 35 min | Réception des données : intégrité, complétude, nomenclature, identifiant unique | [`01_reception_fastq.md`](../diapositives/01_reception_fastq.md) |
+| 45 min | Contrôle qualité des lectures, déplétion humaine, critères de run et d'échantillon | [`02_controle_qualite.md`](../diapositives/02_controle_qualite.md) |
 | 15 min | Pause | — |
-| 50 min | Qualité d'un run : critères, décision, cas limites | [`03_pipeline_et_qualite.md`](../diapositives/03_pipeline_et_qualite.md) |
-| 45 min | **Exercice 1** — statuer sur un run réel (jeu de données fourni) | [`exercice1_qualite_run.md`](../exercices/exercice1_qualite_run.md) |
+| 50 min | Assemblage, classification taxonomique, annotation, versions de bases | [`03_assemblage_taxonomie_annotation.md`](../diapositives/03_assemblage_taxonomie_annotation.md) |
+| 45 min | **Exercice 1** — statuer sur un run (jeu de données fourni) | [`exercice1_qualite_run.md`](../exercices/exercice1_qualite_run.md) |
 
-### Seconde demi-journée — données, preuves et diffusion (3 h 30)
+### Seconde demi-journée — interpréter, rapporter, diffuser (3 h 30)
 
 | Durée | Séquence | Support |
 |-------|----------|---------|
 | 15 min | Retour sur l'exercice 1 et sur les questions restées ouvertes | — |
-| 45 min | Ce qu'un résultat établit : gène, phénotype, mobilisation | [`03_pipeline_et_qualite.md`](../diapositives/03_pipeline_et_qualite.md) (fin) |
-| 40 min | Données et registres : dictionnaire, vocabulaires, jointures | [`04_donnees_et_registres.md`](../diapositives/04_donnees_et_registres.md) |
+| 55 min | Interpréter : gène et phénotype, co-localisation et mobilité, abondance relative, lignage | [`04_interpretation.md`](../diapositives/04_interpretation.md) |
 | 15 min | Pause | — |
-| 40 min | Sauvegarde, accès, dépôt public et données personnelles | [`05_securite_et_depot.md`](../diapositives/05_securite_et_depot.md) |
-| 45 min | **Exercices 2 à 4** au choix selon les actes visés | [`exercices/`](../exercices/README.md) |
+| 50 min | Rapport, validation, libération, dépôt public, archivage et rejouabilité | [`05_rapport_depot_archivage.md`](../diapositives/05_rapport_depot_archivage.md) |
+| 45 min | **Exercices 2 à 4** selon les actes visés | [`exercices/`](../exercices/README.md) |
 | 20 min | **Épreuve théorique** (45 min si passée à part) | [`epreuve_theorique.md`](../evaluation/epreuve_theorique.md) |
+
 
 ## Modalités d'évaluation
 

@@ -14,9 +14,19 @@ Tout agent appelé à réaliser un acte de la section bio-informatique : bio-inf
 biologiste assurant la validation, technicien exécutant le pipeline, étudiant ou stagiaire placé
 sous supervision. Aucun prérequis en ligne de commande n'est exigé pour la première demi-journée.
 
-## Ce qu'elle couvre
+## Le fil conducteur
 
-Les **douze actes** de la section, tels que définis par la fiche d'habilitation FM-06 :
+La formation suit le cheminement de la donnée, de la réception des FASTQ au rapport :
+
+| Module | Objet |
+|---|---|
+| [1](diapositives/01_reception_fastq.md) | Réception des données de séquençage |
+| [2](diapositives/02_controle_qualite.md) | Contrôle qualité des lectures |
+| [3](diapositives/03_assemblage_taxonomie_annotation.md) | De la lecture au résultat |
+| [4](diapositives/04_interpretation.md) | Interpréter |
+| [5](diapositives/05_rapport_depot_archivage.md) | Du résultat au rapport |
+
+Chaque étape est rattachée aux **douze actes** de la section, tels que définis par la fiche d'habilitation FM-06 :
 
 | N° | Acte | Procédure | Niveau requis |
 |----|------|-----------|---------------|
@@ -38,7 +48,7 @@ Les **douze actes** de la section, tels que définis par la fiche d'habilitation
 | Dossier | Contenu | Pour qui |
 |---|---|---|
 | [`programme/`](programme/programme.md) | Objectifs, séquençage, fiche de séance | Animateur |
-| [`diapositives/`](diapositives/01_sgq_et_section_bioinfo.md) | Cinq jeux de planches au format Marp | Animateur |
+| [`diapositives/`](diapositives/01_reception_fastq.md) | Cinq jeux de planches au format Marp | Animateur |
 | [`manuel/`](manuel/manuel_participant.md) | Manuel remis aux participants | Participants |
 | [`exercices/`](exercices/README.md) | Quatre mises en situation et leurs jeux de données | Participants |
 | [`evaluation/`](evaluation/README.md) | Épreuve théorique et grille de correction | Évaluateur |
