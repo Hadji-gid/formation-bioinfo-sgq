@@ -33,12 +33,13 @@ des procédures BIO-02 et BIO-07.
 Deux demi-journées, séparées d'au moins une semaine pour laisser le temps de la lecture et d'une
 première mise en pratique encadrée.
 
-### Module 0 — préalable (2 h, séance séparée)
+### Module 0 — préalable (3 h 30, séance séparée)
 
 | Durée | Séquence | Support |
 |-------|----------|---------|
 | 60 min | Flux de travail en bio-informatique : concepts, structure, outils, formats de fichiers | [`00_workflow_bioinformatique.pptx`](../diapositives/00_workflow_bioinformatique.pptx) |
 | 60 min | Mise en place de l'environnement : WSL et Ubuntu, Conda, outils bioconda, gel de l'environnement | planches 9 à 12 du même module |
+| 90 min | Linux, ligne de commande et scripts : se repérer, filtrer, tubes et redirections, écrire un script robuste, travaux longs | [`00b_linux_ligne_de_commande.pptx`](../diapositives/00b_linux_ligne_de_commande.pptx) |
 
 Ce module est un préalable pour les agents qui n'ont jamais travaillé en ligne de commande. Il
 peut être sauté par ceux qui exploitent déjà le pipeline, et se tient de préférence devant un

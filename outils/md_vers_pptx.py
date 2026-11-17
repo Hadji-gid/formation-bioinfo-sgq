@@ -174,6 +174,31 @@ def tableau(diapo, corps, y, largeur):
     return y + hl * len(corps) + Cm(0.5)
 
 
+def bloc_code(diapo, lignes, y, largeur, taille=Pt(13)):
+    """Rend un bloc de commandes en chasse fixe, sur fond gris clair."""
+    hauteur = Cm(0.52) * len(lignes) + Cm(0.5)
+    fond = diapo.shapes.add_shape(1, MARGE, y, largeur, hauteur)
+    fond.fill.solid()
+    fond.fill.fore_color.rgb = RGBColor(0xF4, 0xF4, 0xF2)
+    fond.line.color.rgb = RGBColor(0xDD, 0xDD, 0xDA)
+    fond.line.width = Pt(0.75)
+    fond.shadow.inherit = False
+    zone = diapo.shapes.add_textbox(MARGE + Cm(0.35), y + Cm(0.22),
+                                    largeur - Cm(0.7), hauteur - Cm(0.4))
+    cadre = zone.text_frame
+    cadre.word_wrap = True
+    cadre.margin_left = cadre.margin_right = cadre.margin_top = cadre.margin_bottom = 0
+    for k, ligne in enumerate(lignes):
+        par = cadre.paragraphs[0] if k == 0 else cadre.add_paragraph()
+        par.line_spacing = 1.1
+        run = par.add_run()
+        run.text = ligne
+        run.font.size = taille
+        run.font.name = "Consolas"
+        run.font.color.rgb = RGBColor(0x24, 0x29, 0x2E)
+    return y + hauteur + Cm(0.45)
+
+
 def item(diapo, marqueur, terme, suite, y, largeur):
     texte(diapo, MARGE, y, Cm(1.1), Cm(1.1), marqueur, Pt(20), ROMAIN, GRIS, gras=True)
     texte(diapo, MARGE + Cm(1.5), y + Cm(0.05), largeur - Cm(1.5), Cm(0.9), terme,
@@ -223,6 +248,17 @@ def corps(diapo, lignes, y):
             else:
                 y = item(diapo, marqueur, ligne, "", y, largeur)
             i += 1
+            continue
+
+        if ligne.startswith("```"):
+            code = []
+            i += 1
+            while i < len(lignes) and not lignes[i].strip().startswith("```"):
+                code.append(lignes[i])
+                i += 1
+            i += 1
+            if code:
+                y = bloc_code(diapo, code, y, largeur)
             continue
 
         if ligne.startswith("> "):
